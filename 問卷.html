@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>10910111_1</title>
+</head>
+<body>
+	<h1>問卷調查表</h1>
+	<form action="https://www.w3schools.com/action_page.php">
+		<p>*姓&nbsp;&nbsp;&nbsp;名：<input type="text" name="username" size="40" required></p>
+		<p>密&nbsp;&nbsp;&nbsp;碼：<input type="password" name="userPWD"></p>
+		<p>E-mail：<input type="text" name="usermail" size="40" value="usermail@gmail.com"></p>
+		<p>E-mai2：<input type="email" name="usermail2" size="40" placeholder="usermail@gmail.com"></p>
+		<p>年&nbsp;&nbsp;&nbsp;齡：
+			<input type="radio" name="userage" value="1">未滿20歲
+			<input type="radio" name="userage" value="2" checked>20~29
+			<input type="radio" name="userage" value="3">30~39
+			<input type="radio" name="userage" value="4">40~49
+			<input type="radio" name="userage" value="5">50歲以上
+		</p>
+		<p>年&nbsp;&nbsp;&nbsp;齡2：
+			<input type="number" name="userage2" min="1" max="200" step="1">
+			
+		</p>
+		<p>年&nbsp;&nbsp;&nbsp;齡3：
+			<input type="range" name="userage3" min="1" max="200" step="1">
+			
+		</p>
+		<p>你使用過的手機：
+			<input type="checkbox" name="userphone[]" value="HTC">HTC
+			<input type="checkbox" name="userphone[]" value="Iphone">Iphone
+			<input type="checkbox" name="userphone[]" value="Samsung">Samsung
+			<input type="checkbox" name="userphone[]" value="Oppo">Oppo
+
+		</p>
+		<p>你使用的問題：
+			<textarea name="usertroble" cols="45" rows="4"></textarea>
+		</p>
+		<p><input type="hidden" name="author" value="Jean"></p>
+		<p>電話：
+			<input type="tel" name="usertel" pattern="[0-9]{4}-[0-9]{6}" placeholder="0945-111111">
+			
+		</p>
+		<P>門號：
+			<select name="userNumber[]" size="4" multiple>
+				<option value="電信1">電信1</option>
+				<option value="電信2">電信2</option>
+				<option value="電信3">電信3</option>
+				<option value="電信4">電信4</option>
+			</select>
+			
+		</P>
+		<p>顏色：
+			<input type="color" name="usercolor">
+				
+		</p>
+		<p>日期時間：
+			<input type="datetime-local" name="userdate">
+			
+		</p>
+		<input type="submit" value="提交">
+		<input type="reset" value="重設">
+	</form>
+</body>
+</html>
