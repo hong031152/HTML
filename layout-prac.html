@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+			*{
+				margin: 0;
+				padding: 0;
+				box-sizing: border-box;
+			}
+			body{
+				background-color: #123;
+				color: white;
+				font-family: sans-serif;
+			}
+			.box{
+				display: none;
+
+			}
+
+		/*大畫面*/
+		@media screen and (min-width: 1200px){
+			
+			.wrap{
+				width: 1200px;
+				/*height: 1290px;*/
+				/*background-color: #568;*/
+				margin: auto;
+				/*outline: 1px solid red;*/
+			}
+			.lg{
+				display: block;
+				width: 380px;
+				height: 410px;
+				border: 3px solid white;
+				margin: 10px;			
+				float: left;
+				transition: .2s;
+			}
+			.box h1{
+				text-transform: uppercase;
+				text-align: center;
+				padding: 10px;
+			}
+			.box p{
+				padding: 10px;
+				text-align: justify;
+			}
+			.box img{
+				width: 100%;
+				filter: grayscale(100%) brightness(.4);
+				transition: .2s;
+				transform: scale(1.2);
+			}
+			.box a{
+				display: block;
+				width: 150px;
+				height: 40px;
+				background-color: tomato;
+				color:  white;
+				margin: auto;
+				text-align: center;
+				text-decoration: none;
+				line-height: 40px;
+				border-radius: 20px;
+				transition: .2s;
+			}
+			.box:hover{
+				cursor: pointer;
+				background-color: white;
+				color: #123;
+			}
+			.box:hover a{
+				background-color: #123;
+				color: yellow;
+			}
+			.box a:hover{
+				background-color: red;
+				color: white;
+			}
+			.box:hover img{
+				filter: grayscale(0%)  brightness(1.1);
+				transform: scale(1);
+				/*width: 120%;*/
+			}
+			.box .imgBox{
+				width: 100%;
+				height: 200px;
+				overflow: hidden;
+			}
+			.clearfix{
+				/*height: 100px;*/
+				background-color: blue;
+				clear: both;
+			}
+		}
+		/*中畫面*/
+		@media screen and (max-width: 1199px) and (min-width: 801px){
+			
+			.wrap{
+				width: 90%;
+				/*height: 1290px;*/
+				/*background-color: yellow;*/
+				margin: auto;
+				/*outline: 1px solid red;*/
+			}
+			.md{
+				display: block;
+				width: 100%;
+				height: 200px;
+				border: 3px solid white;
+				/*margin: 10px;*/
+				margin: 10px 0px;
+				/*margin: 10px 20px 30px 40px; 上右左下*/
+				/*float: left;*/
+				transition: .2s;
+			}
+			.box h1{
+				text-transform: uppercase;
+				text-align: center;
+				padding: 10px;
+			}
+			.box p{
+				padding: 10px;
+				text-align: justify;
+			}
+			.box .imgBox{
+				width: 350px;
+				height: 100%;
+				overflow: hidden;
+				float: left;
+			}
+			.box img{
+				width: 100%;
+				height: 100%;
+				filter: grayscale(100%) brightness(.4);
+				transition: .2s;
+				transform: scale(1.2);
+			}
+			.box a{
+				display: block;
+				width: 150px;
+				height: 40px;
+				background-color: tomato;
+				color:  white;
+				margin: auto;
+				text-align: center;
+				text-decoration: none;
+				line-height: 40px;
+				border-radius: 20px;
+				transition: .2s;
+			}
+			.box:hover{
+				cursor: pointer;
+				background-color: white;
+				color: #123;
+			}
+			.box:hover a{
+				background-color: #123;
+				color: yellow;
+			}
+			.box a:hover{
+				background-color: red;
+				color: white;
+			}
+			.box:hover img{
+				filter: grayscale(0%)  brightness(1.1);
+				transform: scale(1);
+				/*width: 120%;*/
+			}
+			
+			.clearfix{
+				/*height: 100px;*/
+				background-color: blue;
+				clear: both;
+			}
+			.textBox{
+				width: calc(100% - 350px);
+				float: left;
+			}
+		}
+		/*小畫面*/
+		@media screen and (max-width: 800px){
+			
+			.wrap{
+				width: 90%;
+				/*height: 1290px;*/
+				/*background-color: yellow;*/
+				margin: auto;
+				/*outline: 1px solid red;*/
+			}
+			.sm{
+				display: block;
+				width: 100%;
+				height: auto;
+				border: 3px solid white;
+				/*margin: 10px;*/
+				margin: 10px 0px;
+				/*margin: 10px 20px 30px 40px; 上右左下*/
+				/*float: left;*/
+				transition: .2s;
+			}
+			.box h1{
+				text-transform: uppercase;
+				text-align: center;
+				padding: 10px;
+			}
+			.box p{
+				padding: 10px;
+				text-align: justify;
+			}
+			.box .imgBox{
+				width: 100%;
+				max-height: 300px;
+				overflow: hidden;		
+			}
+			.box img{
+				width: 100%;
+				height: 100%;
+				filter: grayscale(100%) brightness(.4);
+				transition: .2s;
+				transform: scale(1.2);
+			}
+			.box a{
+				display: block;
+				width: 150px;
+				height: 40px;
+				background-color: tomato;
+				color:  white;
+				margin: auto;
+				text-align: center;
+				text-decoration: none;
+				line-height: 40px;
+				border-radius: 20px;
+				transition: .2s;
+			}
+			.box:hover{
+				cursor: pointer;
+				background-color: white;
+				color: #123;
+			}
+			.box:hover a{
+				background-color: #123;
+				color: yellow;
+			}
+			.box a:hover{
+				background-color: red;
+				color: white;
+			}
+			.box:hover img{
+				filter: grayscale(0%)  brightness(1.1);
+				transform: scale(1);
+				/*width: 120%;*/
+			}
+			
+			.clearfix{
+				/*height: 100px;*/
+				background-color: blue;
+				clear: both;
+			}
+			.textBox{
+				width: 100%;
+				padding: 0 10px 20px;		
+			}
+			.adv{
+				display: none;
+			}
+		}
+		@media print{
+			body{
+				background-color: white;
+				color: black;
+				font-family: sans-serif;
+			}
+			.box{
+				display: block;
+			}
+			img{
+				display: none;
+			}
+			a{
+				display: none;
+			}
+		}
+		
+
+	</style>
+</head>
+<body>
+	<!-- .box*9>(img[src="https://picsum.photos/350/200?random=$"])+(h1{title$$})+(p>lorem15)+(a[href=#]{read more}) -->
+
+	
+		<div class="wrap">
+			<div class="box lg md">
+				<div class="imgBox">
+					<img src="https://picsum.photos/350/200?random=1" alt="">
+				</div>
+				<div class="textBox">
+					<h1>title01</h1>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus provident tenetur dicta nam exercitationem molestias!</p>
+					<a href="#">read more</a>
+				</div>
+			</div>
+			<div class="box lg md adv">
+				<div class="imgBox">
+					<img src="https://picsum.photos/350/200?random=2" alt="">
+				</div>
+				<div class="textBox">
+					<h1>title02</h1>
+					<p>Ad harum asperiores, culpa necessitatibus nihil totam architecto quasi reprehenderit rerum labore illum veritatis est.</p>
+					<a href="#">read more</a>
+				</div>
+			</div>
+			<div class="box lg md">
+				<div class="imgBox">
+					<img src="https://picsum.photos/350/200?random=3" alt="">
+				</div>
+				<div class="textBox">
+					<h1>title03</h1>
+					<p>Excepturi blanditiis libero quidem quis error rem, consequatur atque eligendi, tempora, dolore beatae natus aliquid!</p>
+					<a href="#">read more</a>
+				</div>
+			</div>
+			<div class="box lg md">
+				<div class="imgBox">
+					<img src="https://picsum.photos/350/200?random=4" alt="">
+				</div>
+				<div class="textBox">
+					<h1>title04</h1>
+					<p>Perferendis molestiae architecto vero voluptatibus, obcaecati animi nesciunt optio qui, incidunt adipisci dolore ut libero?</p>
+					<a href="#">read more</a>
+				</div>
+			</div>
+			<div class="box lg sm md">
+				<div class="imgBox">
+					<img src="https://picsum.photos/350/200?random=5" alt="">
+				</div>
+				<div class="textBox">
+					<h1>title05</h1>
+					<p>Itaque, repudiandae accusamus in. Nihil recusandae doloribus fugiat consectetur maxime necessitatibus quam nobis, reprehenderit ipsam.</p>
+					<a href="#">read more</a>
+				</div>
+			</div>
+			<div class="box lg sm">
+				<div class="imgBox">
+					<img src="https://picsum.photos/350/200?random=6" alt="">
+				</div>
+				<div class="textBox">
+					<h1>title06</h1>
+					<p>Blanditiis voluptate, nihil quisquam dolores officia aut earum nisi beatae non vitae modi illo praesentium!</p>
+					<a href="#">read more</a>
+				</div>
+			</div>
+			<div class="box lg sm">
+				<div class="imgBox">
+					<img src="https://picsum.photos/350/200?random=7" alt="">
+				</div>
+				<div class="textBox">
+					<h1>title07</h1>
+					<p>Molestias iure facere, odio. Amet non qui fuga cupiditate magnam deserunt minima reiciendis eius tempora!</p>
+					<a href="#">read more</a>
+				</div>
+			</div>
+			<div class="box lg sm">
+				<div class="imgBox">
+					<img src="https://picsum.photos/350/200?random=8" alt="">
+				</div>
+				<div class="textBox">
+					<h1>title08</h1>
+					<p>Ex alias beatae quidem hic nemo. Itaque, esse neque adipisci illo architecto libero aspernatur quidem.</p>
+					<a href="#">read more</a>
+				</div>
+			</div>
+			<div class="box lg sm">
+				<div class="imgBox">
+					<img src="https://picsum.photos/350/200?random=9" alt="">
+				</div>
+				<div class="textBox">
+					<h1>title09</h1>
+					<p>Iste voluptatem voluptatibus laudantium autem, odit exercitationem, maxime nostrum ratione corrupti eveniet rerum, ipsum ea.</p>
+					<a href="#">read more</a>
+				</div>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+	
+
+
+
+
+</body>
+</html>
